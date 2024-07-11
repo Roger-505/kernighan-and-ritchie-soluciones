@@ -5,8 +5,8 @@ void main()
     float fahr, celsius;
     int lower, upper, step;
 
-    lower = -20;
-    upper = 160;
+    lower = 0;
+    upper = 300;
     step = 20;
 
     celsius = lower;
