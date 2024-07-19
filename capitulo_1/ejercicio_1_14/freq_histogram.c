@@ -1,46 +1,40 @@
 #include <stdio.h>
 
-#define IN 1 
-#define OUT 0
-#define MAX_WORD_SIZE 20
-#define MAX_WORD_SIZE 20
+#define MAX_CHAR_AMOUNT 256
 
 int main()
 {
-    int c, nc, state, i, j;
-    char word[MAX_WORD_SIZE];
+    char char_num[MAX_CHAR_AMOUNT];
+    int c;
 
-    state = OUT;
-    nc = 0;
-    while((c = getchar()) != EOF)
+    for (int i = 0; i < MAX_CHAR_AMOUNT; i++)
+        char_num[i] = 0; 
+
+    while ((c = getchar()) != EOF)
+        ++char_num[c];
+
+    printf("character frequencies\n");
+    for (int i = 0; i < MAX_CHAR_AMOUNT; i++)
     {
-        if (c == ' ' || c == '\n' || c == '\t')
+        if (char_num[i] != 0)
         {
-            state = OUT;
-            for(i = 0; i < nc; i++)
-                putchar(word[i]);
-            for(j = 0; j < 10 - i; j++)
-                putchar(' ');
+            if (i == '\n')
+                printf("\\n      : ");
+            else if (i == '\t')
+                printf("\\t      : ");
+            else if (i == ' ')
+                printf("espacio : ");
+            else
+                printf("%c       : ", i);
 
-            while (nc)
+            for (int j = char_num[i]; j > 0; j--)
             {
-                printf("#");
-                nc--;
+                putchar('#');
             }
             putchar('\n');
         }
-        else if (state == IN)
-        {
-            word[nc] = c;
-            nc++;
-        }
-        else if (state == OUT)
-        {
-            word[nc] = c;
-            nc++;
-            state = IN;
-        }
     }
+
 }
 
-// ./a.out < test.txt
+// ./a.out < freq_histogram.c | less

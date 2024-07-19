@@ -16,9 +16,9 @@ int main(void)
     while (fahr <= upper)
     {
         celsius = ftoc(fahr);
-        printf("%3.0f %6.1f\n", fahr, celsius);
+        print("%3.0f %6.1f\n", fahr, celsius);
         fahr = fahr + step;
-    }   
+    }
 }
 
 float ftoc(int fahr)
