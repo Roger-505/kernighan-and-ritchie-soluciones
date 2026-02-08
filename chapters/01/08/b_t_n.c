@@ -10,11 +10,19 @@ int main(void)
     while ((c = getchar()) != EOF)
     {
         if (c == '\n')
+        {
             new_line++;
+        }
         if (c == '\t')
+        {
             tab++;
+        }
         if (c == ' ')
+        {
             blank++;
+        }
     }
     printf("New lines: %d\nTabs: %d\nBlanks: %d\n", new_line, tab, blank);
 }
+
+// ./a.out < test.txt

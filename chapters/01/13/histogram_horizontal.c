@@ -3,7 +3,6 @@
 #define IN 1 
 #define OUT 0
 #define MAX_WORD_SIZE 20
-#define MAX_WORD_SIZE 20
 
 int main()
 {
@@ -17,10 +16,8 @@ int main()
         if (c == ' ' || c == '\n' || c == '\t')
         {
             state = OUT;
-            for(i = 0; i < nc; i++)
-                putchar(word[i]);
-            for(j = 0; j < 10 - i; j++)
-                putchar(' ');
+            for(i = 0; i < nc; i++) { putchar(word[i]); } 
+            for(j = 0; j < 10 - i; j++) { putchar(' '); }
 
             while (nc)
             {

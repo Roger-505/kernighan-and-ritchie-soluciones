@@ -23,7 +23,7 @@ int main()
             else if (i == '\t')
                 printf("\\t      : ");
             else if (i == ' ')
-                printf("espacio : ");
+                printf("space: ");
             else
                 printf("%c       : ", i);
 

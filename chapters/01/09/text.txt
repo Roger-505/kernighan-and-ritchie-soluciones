@@ -1,0 +1,3 @@
+hola, este texto   tiene    varios 
+espacios    . Los    espacios duplicados    
+serán     reemplazadas    por espacios     singulares

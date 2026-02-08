@@ -11,14 +11,13 @@ int main(void)
             putchar(c);
             blank = 1;
         }
-        else if (c != ' ' && blank == 1)
-        {
-            putchar(c);
-            blank = 0;
-        } 
         else if (c != ' ')
         {
             putchar(c);
-        }
+            if (blank == 1)
+            {
+                blank = 0;
+            }
+        } 
     }
 }

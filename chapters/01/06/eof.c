@@ -8,8 +8,9 @@ int main()
     {
         c = getchar();
         checkEOF = (c != EOF);
-        if (checkEOF)
+        if (checkEOF){
             printf("EOF not found, (getchar() != EOF) = %d\n", checkEOF);
+        }
         else 
         {
             printf("EOF found, (getchar() != EOF) = %d\n", checkEOF);

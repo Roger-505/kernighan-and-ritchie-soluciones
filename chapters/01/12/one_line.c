@@ -7,7 +7,7 @@ int main()
 {
     int c, state;
 
-    state = I;
+    state = IN;
     while((c = getchar()) != EOF)
     {
         if (c == ' ' || c == '\n' || c == '\t')
