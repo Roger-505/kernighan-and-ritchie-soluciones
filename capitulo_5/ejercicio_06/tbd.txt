@@ -1,0 +1,2 @@
+Tengo que ir a los capitulos pasados y ver las funciones que tengo
+que reimplementar antes de empezar este ejercicio.
